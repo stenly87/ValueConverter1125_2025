@@ -2,8 +2,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValueConverter1125_2025"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ValueConverter1125_2025.MainWindow"
         Title="ValueConverter1125_2025">
-    Welcome to Avalonia!
+    <Window.Resources>
+        <!-- Объявление экземпляра конвертера -->
+        <local:FontSizeToBrushConverter x:Key="fsTobr"/>
+        <local:TextToPriceConverter x:Key="textToPrice"/>
+    </Window.Resources>
+    <StackPanel>
+        <!-- Использование конвертера в привязке-->
+        <TextBlock Background="{Binding ElementName=TextBox1, Path=FontSize, Converter={StaticResource fsTobr}}"/>
+        
+        <TextBox x:Name="TextBox1" FontSize="{Binding ElementName=slider1, Path=Value}" Foreground="{Binding ElementName=TextBox1, Path=FontSize, Converter={StaticResource fsTobr}}"/>
+        
+        <Slider Minimum="10" Maximum="30" x:Name="slider1" />
+        
+        <TextBlock FontSize="35" Text="{Binding ElementName=TextBox1, Path=Text, Converter={StaticResource textToPrice}, ConverterParameter=🎁👺}"/>
+        
+    </StackPanel>
 </Window>

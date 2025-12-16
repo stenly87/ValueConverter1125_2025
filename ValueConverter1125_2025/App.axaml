@@ -1,9 +1,12 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:valueConverter11252025="clr-namespace:ValueConverter1125_2025"
              x:Class="ValueConverter1125_2025.App"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
+<Application.Resources>
+    <!-- Здесь можно объявить конвертеры, которые должны изменять что-то в теге window-->
+</Application.Resources>
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>

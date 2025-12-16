@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ValueConverter1125_2025/App.axaml" value="ValueConverter1125_2025/ValueConverter1125_2025.csproj" />
+        <entry key="ValueConverter1125_2025/MainWindow.axaml" value="ValueConverter1125_2025/ValueConverter1125_2025.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
